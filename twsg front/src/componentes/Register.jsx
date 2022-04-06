@@ -1,17 +1,13 @@
 import {React, Component} from "react";
-import './Login.css'
+import './Register.css'
 import {Button} from 'react-bootstrap'
 
-
-class Login extends Component {
-
+class Register extends Component {
     render(){
 
-
-
         return(
-            <div className="Login">
-                <div className="container">
+        <div  className="Register">
+			  <div className="container">
 	<div className="screen">
 		<div className="screen__content">
 			<form className="login">
@@ -22,11 +18,7 @@ class Login extends Component {
 				<div className="login__field">
 					<i className="login__icon fa fa-lock"></i>
 					<input type="password" className="login__input" placeholder="Password"/> 
-				</div>
-				<button className="button login__submit">
-					<span className="button__text"> Log In Now </span>
-					<i className="button__icon fa fa-chevron-right"></i>
-				</button>		
+				</div>	
 				<Button href="/Register" className="button login__submit">
 					<span className="button__text"> Register</span>
 					<i className="button__icon fa fa-chevron-right"></i>
@@ -35,7 +27,7 @@ class Login extends Component {
 			<div className="social-login">
 				<h3>log in via</h3>
 				<div className="social-icons">
-					<a href="/" className="social-login__icon fa fa-instagram">.</a>
+					<a href="/" className="social-login__icon fa fa-google">.</a>
 					<a href="/" className="social-login__icon fa fa-facebook">.</a>
 					<a href="/" className="social-login__icon fa fa-twitter">.</a>
 				</div>
@@ -49,9 +41,9 @@ class Login extends Component {
 		</div>		
 	</div>
 </div>
-            </div>
+		</div>
         )
     }
 }
 
-export default Login
+export default Register
