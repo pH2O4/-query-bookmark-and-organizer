@@ -21,7 +21,9 @@ const Register = () => {
 			Name: valuesR.Name,
 			Birthay: valuesR.Date,
 			CPF: valuesR.CPF,
-			Gender: valuesR.Gender
+			Gender: valuesR.Gender,
+			Pass: valuesR.Pass,
+			PassRp: valuesR.PassRepeat
 		})
 	}
 
@@ -52,7 +54,9 @@ const Register = () => {
 								<FontAwesomeIcon className="login__iconRegister" icon={faMarsAndVenus} />
 								<Form.Group id="OPTIONCLASSFORM" className="mb-1" controlId="formBasicClass">
 									<select className="login__input" name="Gender" onChange={ChangingValueR}>
-										<option value>Select Class</option>
+										<option value>Gender</option>
+										<option value="Male">Male</option>
+										<option value="Male">Famale</option>
 									</select>
 								</Form.Group>
 							</div>
@@ -64,7 +68,7 @@ const Register = () => {
 								<i className="login__iconRegister fa fa-lock"></i>
 								<input type="password" name="PassRepeat" onChange={ChangingValueR} className="login__input" placeholder="Password Repeat" />
 							</div>
-							<Button onClick={() => Register()} href="/Register" className="button login__submit">
+							<Button onClick={() => Register()}  className="button login__submit">
 								<span className="button__text"> Register</span>
 								<i className="button__icon fa fa-chevron-right"></i>
 							</Button>
