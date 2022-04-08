@@ -1,10 +1,19 @@
 const router = require('express').Router();
 const cors = require('cors')
+const express = require('express')
+const { PrismaClient } = require('@prisma/client')
 
-app.use(cors());
-app.use(express.json());
+router.use(cors());
+router.use(express.json());
 
-router.get('/', async (req, res, next) => {
+const prisma = new PrismaClient()
+
+router.post('/CreateUser', async (req, res, next) => {
+  const user = await prisma.User.create({
+    data:{
+      
+    },
+  })
   res.send({ message: 'Ok api is working 🚀' });
 });
 
