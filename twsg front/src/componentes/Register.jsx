@@ -16,7 +16,7 @@ const Register = () => {
 	};
 
 	const Register = () => {
-		Axios.post('http://localhost:3001/api/CreateUser', {
+		Axios.post('http://localhost:3001/UserManager/CreateUser', {
 			Email: valuesR.Email,
 			Name: valuesR.Name,
 			Birthay: valuesR.Date,
@@ -24,6 +24,8 @@ const Register = () => {
 			Gender: valuesR.Gender,
 			Pass: valuesR.Pass,
 			PassRp: valuesR.PassRepeat
+		}).then((Response)=>{
+			window.alert(Response.data)
 		})
 	}
 
@@ -48,7 +50,7 @@ const Register = () => {
 							</div>
 							<div className="login__fieldRegister">
 								<i className="login__iconRegister fa fa-flag"></i>
-								<input type="text" name="CPF" onChange={ChangingValueR} className="login__input" placeholder="CPF" />
+								<input type="text" name="CPF" onChange={ChangingValueR} className="login__input" placeholder="CPF (Just Numbers)"/>
 							</div>
 							<div className="login__fieldRegister">
 								<FontAwesomeIcon className="login__iconRegister" icon={faMarsAndVenus} />
