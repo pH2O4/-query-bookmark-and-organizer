@@ -1,5 +1,4 @@
-
-import { CreatingUser} from './UserControl.js'
+const CreatingUser = require('./UserControl.js')
 const router = require('express').Router();
 const cors = require('cors')
 const express = require('express')
@@ -14,4 +13,4 @@ const prisma = new PrismaClient()
 
 router.post('/CreateUser', CreatingUser);
 
-export default router
+module.exports = router

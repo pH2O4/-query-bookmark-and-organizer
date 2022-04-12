@@ -33,5 +33,4 @@ const CreatingUser = () => {
           res.send("Your user has been cretead")
         }
 }}
-
-export default router
+module.exports =router
