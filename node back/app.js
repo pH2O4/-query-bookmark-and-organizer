@@ -14,7 +14,7 @@ app.get('/', async (req, res, next) => {
   res.send({ message: 'Awesome it works 🐻' });
 });
 
-app.use('/UserManager', require('./routes/UserManager/user.route'));
+app.use('/ManagerUsers', require('./routes/UserManager/user.route.js'));
 
 app.use((req, res, next) => {
   next(createError.NotFound());

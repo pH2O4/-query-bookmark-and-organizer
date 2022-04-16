@@ -16,7 +16,8 @@ const Register = () => {
 	};
 
 	const Register = () => {
-		Axios.post('http://localhost:3001/UserManager/CreateUser', {
+		console.log(valuesR.Date)
+		Axios.post('http://localhost:3001/ManagerUsers/CreateUser', {
 			Email: valuesR.Email,
 			Name: valuesR.Name,
 			Birthay: valuesR.Date,
@@ -25,8 +26,7 @@ const Register = () => {
 			Pass: valuesR.Pass,
 			PassRp: valuesR.PassRepeat
 		}).then((Response)=>{
-			window.alert(Response.data)
-		})
+			window.alert(Response.data.resforuser)})
 	}
 
 	return (
